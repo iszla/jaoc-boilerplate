@@ -14,12 +14,12 @@ public class Runner<T> {
 
   private static final Logger log = LoggerFactory.getLogger(Runner.class);
 
-  public void execute(Door<T> day, T firstExpectedValue, T secondExpectedValue, String inputPath) {
-    runDay(day.getClass().getSimpleName() + "01", day::StepOne, firstExpectedValue, inputPath);
-    runDay(day.getClass().getSimpleName() + "02", day::StepTwo, secondExpectedValue, inputPath);
+  public void run(Door<T> door, T firstExpectedValue, T secondExpectedValue, String inputPath) {
+    runStep(door.getClass().getSimpleName() + "01", door::StepOne, firstExpectedValue, inputPath);
+    runStep(door.getClass().getSimpleName() + "02", door::StepTwo, secondExpectedValue, inputPath);
   }
 
-  private void runDay(
+  private void runStep(
       String name, Function<List<String>, T> func, T expectedValue, String readInput) {
     log.info("🎅 Executing {} ⛄", name);
 

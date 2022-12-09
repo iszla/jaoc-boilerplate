@@ -1,1 +1,1 @@
-Put your puzzle input for Day01 here
+Put your puzzle input for Door01 here

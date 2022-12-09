@@ -13,6 +13,6 @@ public class Aoc2022 {
         log.info("Starting AoC 2022 executor");
         log.info("Legend:\n🟢 Passed test\n🔴 Failed test\n🟥 Exception");
 
-        intRunner.execute(new Door01(), 24000, 45000, "01.txt");
+        intRunner.run(new Door01(), 24000, 45000, "01.txt");
     }
 }
