@@ -8,11 +8,11 @@ public class Aoc2022 {
   private static final Logger log = LoggerFactory.getLogger(Aoc2022.class);
 
   public static void main(String[] args) {
-    Runner<Integer> intRunner = new Runner<>();
+    Runner runner = new Runner();
 
     log.info("Starting AoC 2022 executor");
     log.info("Legend:\n🟢 Passed test\n🔴 Failed test\n🟥 Exception");
 
-    intRunner.run(new Door01(), "01.txt");
+    runner.run(new Door01(), "01.txt");
   }
 }
